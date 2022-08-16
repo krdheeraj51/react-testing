@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import App from "./App";
-import {replaceCamelWithSpace} from './App';
+import { replaceCamelWithSpace } from "./App";
 
 test("button has correct initial color", () => {
   render(<App />);
@@ -65,12 +65,12 @@ test("Clicked disabled button has gray background and revert to blue", () => {
 
 describe("spacees before camel-case letters", () => {
   test("works for no inner capital letters", () => {
-    expect(replaceCamelWithSpace('Red')).toBe('Red');
+    expect(replaceCamelWithSpace("Red")).toBe("Red");
   });
   test("work for one inner capital letter", () => {
-    expect(replaceCamelWithSpace('MidnightBlue')).toBe('Midnight Blue');
+    expect(replaceCamelWithSpace("MidnightBlue")).toBe("Midnight Blue");
   });
   test("work for multiple inner capital letter", () => {
-    expect(replaceCamelWithSpace('MediumVoiletRed')).toBe("Medium Voilet Red")
+    expect(replaceCamelWithSpace("MediumVoiletRed")).toBe("Medium Voilet Red");
   });
 });
